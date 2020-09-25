@@ -41,10 +41,11 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   end
 end
 
-Then /I should see all the movies/ do
+
+Then /I should see all the movies/ do 
   # Make sure that all the movies in the app are visible in the table
-  @movies.each do |movie|
-    step %Q+I should see "#{movie.title}"+
+  @Movies.each do |movie|
+     step %Q{I should see "#{movie.title}"}
   end
 end
 
